@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madara Speech</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      background: #0d0d14;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1.5rem;
+      position: relative;
+      overflow: hidden;
+      font-family: sans-serif;
+    }
+    .bg {
+      position: fixed; inset: 0;
+      background: #0d0d14;
+      z-index: 0;
+    }
+    .bg svg { width: 100%; height: 100%; }
+    .content {
+      position: relative; z-index: 2;
+      display: flex; flex-direction: column;
+      align-items: center;
+      width: 100%; max-width: 480px;
+    }
+    .back-btn {
+      align-self: flex-start;
+      font-size: 12px; color: #7a718a;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      margin-bottom: 2rem;
+    }
+    .back-btn:hover { color: #ede8ff; }
+    .char-badge {
+      width: 56px; height: 56px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px; font-weight: 500;
+      background: rgba(196,59,59,0.25);
+      color: #f09595;
+      border: 0.5px solid rgba(196,59,59,0.4);
+      margin-bottom: 14px;
+    }
+    .tag { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #6b6278; margin-bottom: 6px; }
+    .char-name { font-size: 28px; font-weight: 500; color: #f0ecff; margin-bottom: 4px; text-align: center; }
+    .char-sub  { font-size: 13px; color: #6b6278; margin-bottom: 2.2rem; text-align: center; }
+    .divider { width: 1px; height: 28px; background: #2a2040; margin: 0 auto 2.2rem; }
+    .media-card {
+      width: 100%;
+      background: rgba(255,255,255,0.04);
+      border: 0.5px solid rgba(255,255,255,0.1);
+      border-radius: 14px;
+      padding: 1.2rem;
+      margin-bottom: 12px;
+    }
+    .media-label {
+      font-size: 10px; letter-spacing: 0.14em;
+      text-transform: uppercase; color: #4a4160;
+      margin-bottom: 10px;
+    }
+    video, audio { width: 100%; border-radius: 8px; display: block; background: #0d0d14; }
+    video { max-height: 260px; object-fit: contain; }
+    .accent-line { width: 40px; height: 2px; background: #A32D2D; border-radius: 2px; margin: 2rem auto 0; }
+  </style>
+</head>
+<body>
+  <div class="bg">
+    <svg viewBox="0 0 700 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <rect width="700" height="600" fill="#0d0d14"/>
+      <circle cx="350" cy="300" r="260" fill="none" stroke="#2a1a1a" stroke-width="1"/>
+      <circle cx="350" cy="300" r="200" fill="none" stroke="#2a1a1a" stroke-width="0.5"/>
+      <circle cx="120" cy="80" r="140" fill="#1e0e0e" opacity="0.7"/>
+      <circle cx="580" cy="500" r="120" fill="#1a0d0d" opacity="0.8"/>
+      <line x1="0" y1="600" x2="700" y2="0" stroke="#2e1818" stroke-width="0.5"/>
+      <line x1="0" y1="500" x2="700" y2="100" stroke="#281414" stroke-width="0.5"/>
+      <polygon points="350,50 370,90 330,90" fill="#A32D2D" opacity="0.18"/>
+      <polygon points="350,550 370,510 330,510" fill="#A32D2D" opacity="0.10"/>
+      <circle cx="200" cy="160" r="2" fill="#f09595" opacity="0.4"/>
+      <circle cx="500" cy="440" r="2" fill="#f09595" opacity="0.35"/>
+      <circle cx="580" cy="140" r="1.5" fill="#F7C1C1" opacity="0.5"/>
+      <circle cx="130" cy="420" r="1.5" fill="#F7C1C1" opacity="0.3"/>
+    </svg>
+  </div>
+  <div class="content">
+    <a href="index.html" class="back-btn">← back to speeches</a>
+    <div class="char-badge">M</div>
+    <p class="tag">Naruto · Uchiha Clan</p>
+    <h1 class="char-name">Madara Uchiha</h1>
+    <p class="char-sub">Wake up to reality</p>
+    <div class="divider"></div>
+    <div class="media-card">
+      <p class="media-label">Video</p>
+      <video autoplay muted controls>
+        <source src="video/MadaraSpeech.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="media-card">
+      <p class="media-label">Audio</p>
+      <audio autoplay controls >
+        <source src="audio/MadaraSpeech.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <div class="accent-line"></div>
+  </div>
+</body>
+</html>
