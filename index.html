@@ -9,130 +9,154 @@
 </head>
 <body>
 <div class="page">
-
+ 
   <!-- HEADER -->
   <div class="header">
     <div class="header-photo-wrap">
       <div class="header-photo-circle">
-        <img src="jp.jpg" alt="John Paul S. Dela Cruz" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-        <div class="photo-initials" style="display:none">JP</div>
+        <img src="jp.jpg" alt="John Paul S. Dela Cruz"
+             onerror="this.style.display='none'"/>
+    
       </div>
     </div>
     <div class="header-text">
       <h1>John Paul S. Dela Cruz</h1>
-      <div class="subtitle">BS Information Technology — Mobile & Web Application</div>
+      <div class="subtitle">BS Information Technology — Mobile &amp; Web Application</div>
     </div>
   </div>
-
+ 
   <!-- BODY -->
   <div class="body">
-
+ 
     <!-- SIDEBAR -->
     <div class="sidebar">
-
+ 
       <div class="sidebar-section">
         <div class="sidebar-title">Contact</div>
-
         <div class="contact-item">
           <div class="contact-icon">
             <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
           </div>
-          <div class="contact-text">+639335570565</div>
+          <div class="contact-text">+63 933 557 0565</div>
         </div>
-
         <div class="contact-item">
           <div class="contact-icon">
             <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
           </div>
           <div class="contact-text"><a href="mailto:jeypjdc02@gmail.com">jeypjdc02@gmail.com</a></div>
         </div>
-
         <div class="contact-item">
           <div class="contact-icon">
             <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
           </div>
-          <div class="contact-text">Sitio old Boso-Boso Brgy. San Jose, Antipolo City, Rizal</div>
+          <div class="contact-text">Sitio old Boso-Boso, Brgy. San Jose, Antipolo City, Rizal</div>
         </div>
       </div>
-
+ 
       <div class="sidebar-section">
         <div class="sidebar-title">Education</div>
-
         <div class="edu-entry">
-          <div class="edu-level">Primary Education</div>
+          <div class="edu-level">Primary</div>
           <div class="edu-school">St. Mark's Institute Annex</div>
           <div class="edu-year">SY 2010–2014</div>
         </div>
-
         <div class="edu-entry">
           <div class="edu-school">Camaigan Central School</div>
           <div class="edu-year">SY 2014–2017</div>
         </div>
-
         <div class="edu-entry">
-          <div class="edu-level">Secondary Education</div>
+          <div class="edu-level">Secondary</div>
           <div class="edu-school">Camaigan National High School</div>
           <div class="edu-year">SY 2017–2020</div>
         </div>
-
         <div class="edu-entry">
           <div class="edu-school">Old Boso-Boso National High School</div>
           <div class="edu-year">SY 2020–2023</div>
         </div>
-
         <div class="edu-entry">
-          <div class="edu-level">Tertiary Education</div>
+          <div class="edu-level">Tertiary</div>
           <div class="edu-school">National University – Manila</div>
           <div class="edu-year">AY 2023–2028</div>
         </div>
       </div>
-
+ 
+      <div class="sidebar-section">
+        <div class="sidebar-title">Quick Actions</div>
+        <div class="sidebar-btn-col">
+          <button class="resume-btn btn-primary" onclick="window.print()">⬇ Download / Print</button>
+          <button class="resume-btn btn-outline" onclick="copyEmail()">✉ Copy Email</button>
+          <div class="msg-bar" id="copy-msg">Email copied to clipboard!</div>
+        </div>
+      </div>
+ 
     </div>
-
+ 
     <!-- MAIN -->
     <div class="main">
-
+ 
       <div class="main-section">
         <div class="main-title">
-          <div class="main-title-dot"></div>
-          About me
-          <div class="main-title-line"></div>
+          <div class="main-title-dot"></div>About Me<div class="main-title-line"></div>
         </div>
         <p class="main-text">I'm a student at National University – Manila, currently pursuing a Bachelor of Science in Information Technology with a specialization in Mobile and Web Application. I'm not a naturally talented person, but I have a strong desire to learn and grow in every opportunity that comes my way.</p>
       </div>
-
+ 
       <div class="main-section">
         <div class="main-title">
-          <div class="main-title-dot"></div>
-          Experience
-          <div class="main-title-line"></div>
+          <div class="main-title-dot"></div>Experience<div class="main-title-line"></div>
         </div>
-        <div class="exp-entry">
-          <div class="exp-role">Class Treasurer (Senior High School)</div>
-          <div class="exp-year">Academic Year 2021 – 2023</div>
+        <table class="resume-table">
+          <thead>
+            <tr>
+              <th>Role</th>
+              <th>Organization</th>
+              <th>Duration</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Class Treasurer</td>
+              <td>Old Boso-Boso National High School</td>
+              <td>AY 2021–2023</td>
+            </tr>
+            <tr>
+              <td>IT Student</td>
+              <td>National University – Manila</td>
+              <td>AY 2023–Present</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+ 
+      <div class="main-section">
+        <div class="main-title">
+          <div class="main-title-dot"></div>Skills<div class="main-title-line"></div>
+        </div>
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab('technical', this)">Technical</button>
+          <button class="tab-btn" onclick="switchTab('soft', this)">Soft Skills</button>
+        </div>
+        <div class="tab-content active" id="tab-technical">
+          <div class="skills-grid">
+            <div class="skill-badge">HTML, CSS, JavaScript</div>
+            <div class="skill-badge">Basic Accounting</div>
+            <div class="skill-badge">Web Application Dev</div>
+            <div class="skill-badge">Mobile App Fundamentals</div>
+          </div>
+        </div>
+        <div class="tab-content" id="tab-soft">
+          <ul class="resume-list">
+            <li>Communication — clear written and verbal expression</li>
+            <li>Problem-Solving — analytical approach to challenges</li>
+            <li>Adaptability — quick to adjust to new environments</li>
+            <li>Time Management — balancing academics and responsibilities</li>
+          </ul>
         </div>
       </div>
-
+ 
       <div class="main-section">
         <div class="main-title">
-          <div class="main-title-dot"></div>
-          Skills
-          <div class="main-title-line"></div>
-        </div>
-        <div class="skills-grid">
-          <div class="skill-badge">HTML, CSS, JavaScript</div>
-          <div class="skill-badge">Basic Accounting</div>
-          <div class="skill-badge">Communication</div>
-          <div class="skill-badge">Problem-Solving</div>
-          <div class="skill-badge">Adaptability</div>
-        </div>
-      </div>
-
-      <div class="main-section">
-        <div class="main-title">
-          <div class="main-title-dot"></div>
-          Achievement
-          <div class="main-title-line"></div>
+          <div class="main-title-dot"></div>Achievement<div class="main-title-line"></div>
         </div>
         <div class="achieve-entry">
           <div class="achieve-star">
@@ -140,13 +164,37 @@
           </div>
           <div>
             <div class="achieve-title">Dean's Lister</div>
-            <div class="achieve-sub">2nd Year, 3rd Term</div>
+            <div class="achieve-sub">National University – Manila · 2nd Year, 3rd Term</div>
           </div>
         </div>
+        <div style="margin-top: 8px;">
+          <p style="font-size:11.5px; color:#777; margin-bottom:4px;">Notable highlights of the term:</p>
+          <ul class="resume-list">
+            <li>Maintained high academic standing across all subjects</li>
+            <li>Consistently met all coursework and project deadlines</li>
+            <li>Recognized by faculty for academic performance</li>
+          </ul>
+        </div>
       </div>
-
+ 
+      <div class="main-section">
+        <div class="main-title">
+          <div class="main-title-dot"></div>Location<div class="main-title-line"></div>
+        </div>
+        <div class="iframe-wrap">
+          <div class="iframe-label">Map — Antipolo City, Rizal</div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241.26922115000303!2d121.23933170933705!3d14.63847601515646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397be6b35c6a3f5%3A0x1bebae3947ef5256!2sBicolandia%20General%20Merchandise!5e0!3m2!1sen!2sph!4v1775886701687!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="btn-row">
+          <button class="resume-btn btn-ghost" onclick="window.open('https://www.google.com/maps/search/Antipolo+City+Rizal','_blank')">Open in Google Maps ↗</button>
+        </div>
+      </div>
+ 
     </div>
   </div>
 </div>
+ 
+<script src="script.js"> </script>
 </body>
 </html>
+ 
