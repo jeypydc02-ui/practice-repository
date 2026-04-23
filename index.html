@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scent Haven – Home</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+
+    /* ─── BASE ─────────────────────────────────────── */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background-image: url("images/background.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #5a3448;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(255, 182, 193, 0.38);
+      z-index: -1;
+    }
+
+    /* ─── NAV (unordered list) ──────────────────────── */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(12px);
+      border-bottom: 2px solid #ffc1da;
+      z-index: 1000;
+      padding: 0 40px;
+    }
+
+    nav ul {
+      list-style: none;           /* <ul> for navigation — requirement */
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 0;
+      justify-content: center;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #d86b9f;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 7px 18px;
+      border-radius: 20px;
+      transition: 0.25s;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      background: #d86b9f;
+      color: white;
+    }
+
+    /* ─── SHARED SECTION ────────────────────────────── */
+    section {
+      padding: 100px 50px 60px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-card {
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 25px;
+      box-shadow: 0 4px 30px rgba(216, 107, 159, 0.15);
+      padding: 45px 50px;
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      font-family: 'Parisienne', cursive;
+      color: #d86b9f;
+      font-size: 64px;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      font-family: 'Parisienne', cursive;
+      color: #d86b9f;
+      font-size: 38px;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      color: #d86b9f;
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    p { line-height: 1.8; font-size: 15px; color: #7a4a5e; }
+
+    /* ─── HERO ──────────────────────────────────────── */
+    #hero { text-align: center; padding-top: 120px; }
+
+    .hero-sub {
+      font-size: 16px;
+      color: #b06080;
+      margin-bottom: 35px;
+    }
+
+    /* ─── PRODUCT TABLE ─────────────────────────────── */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    thead tr {
+      background: #f7c5da;
+      color: #7a2e52;
+    }
+
+    thead th {
+      padding: 13px 16px;
+      text-align: left;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    tbody tr {
+      border-bottom: 1px solid #fce4ef;
+      transition: background 0.2s;
+    }
+
+    tbody tr:hover { background: rgba(255, 193, 218, 0.25); }
+
+    tbody td {
+      padding: 12px 16px;
+      color: #5a3448;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #fce4ef;
+      color: #c0507a;
+      border-radius: 20px;
+      padding: 3px 12px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    /* ─── FLOAT LAYOUT ──────────────────────────────── */
+    .float-section::after { content: ""; display: table; clear: both; }
+
+    .float-img {
+      float: left;                /* Float — requirement */
+      width: 260px;
+      height: 340px;
+      object-fit: cover;
+      border-radius: 18px;
+      margin: 0 30px 20px 0;
+      box-shadow: 0 8px 25px rgba(216, 107, 159, 0.25);
+    }
+
+    .float-img.right {
+      float: right;               /* Float right — requirement */
+      margin: 0 0 20px 30px;
+    }
+
+    .float-text h2 { font-size: 30px; }
+    .float-text p { margin-bottom: 12px; }
+
+    .cta-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 28px;
+      background: #d86b9f;
+      color: white;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      transition: 0.25s;
+    }
+
+    .cta-btn:hover { background: #b04f7a; }
+
+    /* ─── IFRAMES ───────────────────────────────────── */
+    .iframe-row {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .iframe-box {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .iframe-box p {
+      font-size: 13px;
+      color: #b06080;
+      margin-bottom: 8px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .iframe-box iframe {
+      width: 100%;
+      height: 260px;
+      border: 2px solid #ffc1da;
+      border-radius: 14px;
+    }
+
+    /* ─── LINKS SECTION ─────────────────────────────── */
+    .links-grid {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 15px;
+    }
+
+    .link-card {
+      background: rgba(255, 193, 218, 0.25);
+      border: 1px solid #ffc1da;
+      border-radius: 15px;
+      padding: 20px 25px;
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .link-card h4 {
+      color: #d86b9f;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 12px;
+    }
+
+    .link-card a {
+      display: block;
+      color: #b04f7a;
+      text-decoration: none;
+      font-size: 14px;
+      padding: 5px 0;
+      border-bottom: 1px dashed #ffc1da;
+      transition: 0.2s;
+    }
+
+    .link-card a:last-child { border-bottom: none; }
+    .link-card a:hover { color: #d86b9f; padding-left: 6px; }
+
+    /* ─── FOOTER ────────────────────────────────────── */
+    footer {
+      text-align: center;
+      padding: 25px;
+      font-size: 13px;
+      color: #b06080;
+      background: rgba(255, 255, 255, 0.5);
+      border-top: 2px solid #ffc1da;
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     STEP 2 — NAVIGATION BAR using <ul> unordered list
+════════════════════════════════════════════════════ -->
+<nav>
+  <ul>
+    <li><a href="index.html" class="active">🏠 Home</a></li>
+    <li><a href="products.html">🛍️ Products</a></li>
+    <li><a href="about.html">🌸 About</a></li>
+    <li><a href="contact.html">💌 Contact</a></li>
+  </ul>
+</nav>
+
+
+<!-- ═══════════════════════════════════════════════════
+     STEP 3 — HOME PAGE (INDEX)
+════════════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="section-card" style="text-align:center;">
+    <h1>Scent Haven</h1>
+    <p class="hero-sub">✿ Soft luxury perfumes for your coquette aesthetic ✿</p>
+    <a href="products.html" class="cta-btn">Shop All Perfumes 🎀</a>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     REQUIREMENT 1 — PRODUCTS TABLE
+════════════════════════════════════════════════════ -->
+<section>
+  <div class="section-card">
+    <h2>Featured Products</h2>
+    <p>A quick look at our bestselling fragrances this season.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Product Name</th>
+          <th>Scent Family</th>
+          <th>Size</th>
+          <th>Price</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>01</td>
+          <td><strong>Rose Reverie</strong></td>
+          <td>Floral · Musky</td>
+          <td>50 ml</td>
+          <td>₱ 1,299</td>
+          <td><span class="badge">In Stock</span></td>
+        </tr>
+        <tr>
+          <td>02</td>
+          <td><strong>Blossom Mist</strong></td>
+          <td>Floral · Woody</td>
+          <td>50 ml</td>
+          <td>₱ 1,499</td>
+          <td><span class="badge">In Stock</span></td>
+        </tr>
+        <tr>
+          <td>03</td>
+          <td><strong>Velvet Dreams</strong></td>
+          <td>Oriental · Creamy</td>
+          <td>50 ml</td>
+          <td>₱ 1,599</td>
+          <td><span class="badge">In Stock</span></td>
+        </tr>
+        <tr>
+          <td>04</td>
+          <td><strong>Petite Lumière</strong></td>
+          <td>Citrus · Fresh</td>
+          <td>30 ml</td>
+          <td>₱ 899</td>
+          <td><span class="badge">Limited</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     REQUIREMENT 2 — FLOAT LAYOUT
+════════════════════════════════════════════════════ -->
+<section>
+  <div class="section-card">
+    <h2>Our Signature Scents</h2>
+
+    <!-- Float LEFT -->
+    <div class="float-section">
+      <img src="images/perfume 1.jpg" alt="Rose Reverie" class="float-img">
+      <div class="float-text">
+        <h3>🌹 Rose Reverie</h3>
+        <p>
+          A delicate bouquet of fresh roses, white musk, and a sweet whisper of vanilla.
+          Perfect for romantic evenings and soft, feminine moments.
+        </p>
+        <p>
+          Long-lasting up to 8 hours, this scent wraps you in the warmth of a rose garden
+          in full bloom — timeless, elegant, and utterly coquette.
+        </p>
+        <a href="products.html" class="cta-btn">View Product →</a>
+      </div>
+    </div>
+
+    <br style="clear:both; margin:30px 0;">
+
+    <!-- Float RIGHT -->
+    <div class="float-section">
+      <img src="images/perfume 3.jpg" alt="Velvet Dreams" class="float-img right">
+      <div class="float-text">
+        <h3>🌙 Velvet Dreams</h3>
+        <p>
+          Rich jasmine and iris open into a creamy base of amber and cashmere.
+          This is the scent of quiet luxury — the kind you wear when you want to feel
+          effortlessly memorable.
+        </p>
+        <p>
+          Inspired by candlelit evenings and velvet ribbons, Velvet Dreams is bold,
+          warm, and unmistakably Scent Haven.
+        </p>
+        <a href="products.html" class="cta-btn">View Product →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     REQUIREMENT 3 — IFRAMES
+════════════════════════════════════════════════════ -->
+<section>
+  <div class="section-card">
+    <h2>Explore More</h2>
+    <p>Watch our brand story and find us on the map.</p>
+
+    <div class="iframe-row">
+
+      <!-- iframe 1: YouTube video embed -->
+      <div class="iframe-box">
+        <p>🎬 Brand Inspiration Video</p>
+        <iframe
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          title="Scent Haven Brand Video"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <!-- iframe 2: Google Maps embed -->
+      <div class="iframe-box">
+        <p>📍 Find Our Store</p>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.9079102184214!2d120.99001527260691!3d14.604321545807299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9fc11a6ceb3%3A0x9d4220dade0140ab!2sNational%20University-Manila!5e0!3m2!1sen!2sph!4v1776929315985!5m2!1sen!2sph"
+          title="Store Location"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     REQUIREMENT 4 — ABSOLUTE & RELATIVE LINKS
+════════════════════════════════════════════════════ -->
+<section>
+  <div class="section-card">
+    <h2>Quick Links</h2>
+    <p>Explore our pages or visit our partners and inspirations.</p>
+
+    <div class="links-grid">
+
+      <!-- RELATIVE LINKS — internal pages -->
+      <div class="link-card">
+        <h4>📂 Relative Links (Internal Pages)</h4>
+        <a href="index.html">🏠 Home Page</a>
+        <a href="products.html">🛍️ Products</a>
+        <a href="about.html">🌸 About Us</a>
+        <a href="contact.html">💌 Contact</a>
+        <a href="images/perfume 1.jpg">🖼️ Perfume 1 Image</a>
+      </div>
+
+      <!-- ABSOLUTE LINKS — external websites -->
+      <div class="link-card">
+        <h4>🌐 Absolute Links (External Sites)</h4>
+        <a href="https://www.fragrantica.com" target="_blank">🌹 Fragrantica – Perfume Encyclopedia</a>
+        <a href="https://www.sephora.ph" target="_blank">💄 Sephora Philippines</a>
+        <a href="https://www.instagram.com" target="_blank">📷 Instagram – @scenthaven</a>
+        <a href="https://www.facebook.com" target="_blank">💬 Facebook Page</a>
+        <a href="https://fonts.google.com" target="_blank">🔤 Google Fonts</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+  &copy; 2025 Scent Haven &nbsp;|&nbsp; Crafted with 🎀 by Bautista, Monine Michaela
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact – Scent Haven</title>
+
+<!-- 🎀 GOOGLE FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+scroll-behavior:smooth;
+font-family:'Quicksand', sans-serif;
+background-image:url("images/background.jpg");
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+}
+
+body::before{
+content:"";
+position:fixed;
+top:0; left:0;
+width:100%; height:100%;
+background:rgba(255,182,193,0.35);
+z-index:-1;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(255,255,255,0.7);
+backdrop-filter:blur(10px);
+border-bottom:2px solid #ffc1da;
+text-align:center;
+padding:15px;
+z-index:1000;
+}
+
+nav a{
+margin:15px;
+text-decoration:none;
+color:#d86b9f;
+font-weight:500;
+}
+
+nav a:hover{ color:#b04f7a; }
+
+.page{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+padding:100px 40px 60px;
+text-align:center;
+}
+
+.card{
+background:rgba(255,255,255,0.6);
+border-radius:25px;
+box-shadow:0 0 25px rgba(216,107,159,0.15);
+padding:50px 60px;
+max-width:480px;
+width:100%;
+}
+
+h1{
+font-family:'Parisienne', cursive;
+color:#d86b9f;
+font-size:52px;
+margin-bottom:5px;
+}
+
+.subtitle{
+color:#b04f7a;
+font-size:14px;
+margin-bottom:30px;
+}
+
+input, textarea{
+width:100%;
+box-sizing:border-box;
+padding:12px 15px;
+margin:8px 0;
+border:1px solid #ffc1da;
+border-radius:12px;
+font-family:'Quicksand', sans-serif;
+font-size:14px;
+background:rgba(255,255,255,0.8);
+color:#7a4a5e;
+outline:none;
+transition:0.3s;
+}
+
+input:focus, textarea:focus{
+border-color:#d86b9f;
+box-shadow:0 0 0 3px rgba(216,107,159,0.15);
+}
+
+textarea{
+height:120px;
+resize:none;
+}
+
+button{
+margin-top:15px;
+padding:12px 35px;
+background:#d86b9f;
+border:none;
+color:white;
+cursor:pointer;
+border-radius:12px;
+font-family:'Quicksand', sans-serif;
+font-size:15px;
+font-weight:500;
+transition:0.3s;
+width:100%;
+}
+
+button:hover{ background:#b04f7a; }
+
+.success{
+display:none;
+color:#b04f7a;
+margin-top:15px;
+font-size:14px;
+}
+
+/* SOCIAL ROW */
+.socials{
+margin-top:25px;
+display:flex;
+justify-content:center;
+gap:15px;
+}
+
+.socials a{
+text-decoration:none;
+color:#d86b9f;
+font-size:13px;
+font-weight:500;
+border:1px solid #ffc1da;
+padding:7px 16px;
+border-radius:20px;
+transition:0.3s;
+}
+
+.socials a:hover{
+background:#d86b9f;
+color:white;
+}
+
+.back{
+display:inline-block;
+margin-top:25px;
+text-decoration:none;
+color:#d86b9f;
+font-weight:500;
+font-size:14px;
+}
+
+.back:hover{ color:#b04f7a; }
+
+</style>
+</head>
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="products.html">Products</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<div class="page">
+  <div class="card">
+
+    <h1>Contact Us</h1>
+    <p class="subtitle">✿ We'd love to hear from you ✿</p>
+
+    <input type="text" id="name" placeholder="Your Name"><br>
+    <input type="email" id="email" placeholder="Your Email"><br>
+    <textarea id="message" placeholder="Your Message"></textarea><br>
+    <button onclick="handleSend()">Send Message 🎀</button>
+
+    <p class="success" id="success">✿ Thank you! We'll get back to you soon. ✿</p>
+
+    <div class="socials">
+      <a href="#">📩 Email Us</a>
+      <a href="#">📷 Instagram</a>
+      <a href="#">💬 Facebook</a>
+    </div>
+
+    <br>
+    <a href="index.html" class="back">← Back to Home</a>
+
+  </div>
+</div>
+
+<script>
+function handleSend(){
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const msg = document.getElementById('message').value.trim();
+  if(!name || !email || !msg){ alert('Please fill in all fields 🌸'); return; }
+  document.getElementById('success').style.display = 'block';
+  document.getElementById('name').value = '';
+  document.getElementById('email').value = '';
+  document.getElementById('message').value = '';
+}
+</script>
+
+</body>
+</html>
