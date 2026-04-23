@@ -186,3 +186,57 @@ h1 {
 .back a:hover {
   color: #b04f7a;
 }
+
+/* CRAFTED WITH LOVE FLOAT */
+.cwl-float {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: linear-gradient(135deg, #fff0f5, #fce8f3, #fff5f0);
+  border: 0.5px solid #f7c0d8;
+  border-radius: 60px;
+  padding: 14px 36px;
+  box-shadow: 0 4px 24px rgba(212, 83, 126, 0.15);
+  animation: floatUp 3.2s ease-in-out infinite;
+  z-index: 999;
+  white-space: nowrap;
+}
+
+.cwl-petal {
+  font-size: 18px;
+  animation: spin 6s linear infinite;
+  display: inline-block;
+}
+
+.cwl-petal.rev {
+  animation-direction: reverse;
+}
+
+.cwl-top {
+  font-family: 'Parisienne', cursive;
+  font-size: 15px;
+  color: #b05070;
+  display: block;
+}
+
+.cwl-names {
+  font-size: 12px;
+  font-weight: 500;
+  color: #c06888;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  display: block;
+}
+
+@keyframes floatUp {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(-7px); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

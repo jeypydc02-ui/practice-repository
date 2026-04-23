@@ -6,6 +6,50 @@
 <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="products.css">
 
+<style>
+  /* Right-float variant for feature sections */
+  .float-img-right {
+    float: right;
+    width: 260px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 0 0 15px 30px;
+    box-shadow: 0 15px 35px rgba(216, 107, 159, 0.3);
+  }
+
+  /* PRICE TAG on float features */
+  .float-price-tag {
+    display: inline-block;
+    background: linear-gradient(135deg, #d86b9f, #e899c0);
+    color: #fff;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 8px 22px;
+    border-radius: 30px;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 14px rgba(216, 107, 159, 0.35);
+    letter-spacing: 0.5px;
+  }
+
+  .float-price-tag::before {
+    content: "🏷️";
+    margin-right: 6px;
+    font-size: 14px;
+  }
+
+  /* 4x4 GRID — exactly 4 columns */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+  }
+</style>
+
 </head>
 
 <body>
@@ -22,11 +66,12 @@
 
 <h1>Our Perfume Collection</h1>
 
-<!-- FLOAT PRODUCT FEATURE LAYOUT -->
+<!-- FLOAT FEATURE 1 — Crafted with Love (image LEFT) -->
 <div class="float-feature">
   <img src="images/perfume 1.jpg" class="float-img">
   <div class="float-text">
     <h2>Crafted with Love</h2>
+    <div class="float-price-tag">Php 5,500</div>
     <p>
       Each Scent Haven perfume is carefully crafted to evoke emotion and elegance.
       Our signature blends use the finest floral and oriental ingredients,
@@ -41,80 +86,166 @@
   <div class="float-clear"></div>
 </div>
 
-<!-- PRODUCTS GRID (10 ITEMS) -->
+<!-- FLOAT FEATURE 2 — Honey Rose (image RIGHT) -->
+<div class="float-feature">
+  <img src="images/perfume 3.jpg" class="float-img-right">
+  <div class="float-text">
+    <h2>Honey Rose</h2>
+    <div class="float-price-tag">Php 4,800</div>
+    <p>
+      Each Scent Haven perfume is carefully crafted to evoke emotion and elegance.
+      Our signature blends use the finest floral and oriental ingredients,
+      bottled in delicate glass that mirrors the beauty within.
+    </p>
+    <p>
+      From light morning mists to deep evening roses — there is a scent for every
+      moment of your day. Explore our full collection below.
+    </p>
+    <a href="#" class="float-btn">Explore Collection</a>
+  </div>
+  <div class="float-clear"></div>
+</div>
+
+<!-- FLOAT FEATURE 3 — Crystal Petal (image LEFT) -->
+<div class="float-feature">
+  <img src="images/perfume 2.jpg" class="float-img">
+  <div class="float-text">
+    <h2>Crystal Petal</h2>
+    <div class="float-price-tag">Php 6,200</div>
+    <p>
+      Each Scent Haven perfume is carefully crafted to evoke emotion and elegance.
+      Our signature blends use the finest floral and oriental ingredients,
+      bottled in delicate glass that mirrors the beauty within.
+    </p>
+    <p>
+      From light morning mists to deep evening roses — there is a scent for every
+      moment of your day. Explore our full collection below.
+    </p>
+    <a href="#" class="float-btn">Explore Collection</a>
+  </div>
+  <div class="float-clear"></div>
+</div>
+
+
+<!-- PRODUCTS GRID — 4x4 layout (16 cards) -->
 <div class="grid">
 
-<div class="card">
-<img src="images/Fairy Potion.jpg">
-<div class="name">Rose Whisper</div>
-<div class="price">Php 2,500</div>
-<div class="desc">Soft floral scent with romantic rose notes.</div>
+  <div class="card">
+    <img src="images/Fairy Potion.jpg">
+    <div class="name">Rose Whisper</div>
+    <div class="price">Php 2,500</div>
+    <div class="desc">Soft floral scent with romantic rose notes.</div>
+  </div>
+
+  <div class="card">
+    <img src="images/cutie.jpg">
+    <div class="name">Pink Bloom</div>
+    <div class="price">Php 3,000</div>
+    <div class="desc">Sweet and feminine with fresh petals.</div>
+  </div>
+
+  <div class="card">
+    <img src="images/cake.jpg">
+    <div class="name">Soft Petals</div>
+    <div class="price">Php 2,800</div>
+    <div class="desc">Light airy fragrance with gentle florals.</div>
+  </div>
+
+  <div class="card">
+    <img src="images/download (1).jpg">
+    <div class="name">Velvet Rose</div>
+    <div class="price">Php 9,500</div>
+    <div class="desc">Deep rose scent with warm undertones.</div>
+  </div>
+
+  <div class="card">
+    <img src="images/download (4).jpg">
+    <div class="name">Sugar Blossom</div>
+    <div class="price">Php 8,000</div>
+    <div class="desc">Sweet candy-like floral fragrance.</div>
+  </div>
+
+  <div class="card">
+    <img src="images/Sweetheart by LoveShackFancy 🎀💕💗.jpg">
+    <div class="name">Lily Dream</div>
+    <div class="price">Php 2,000</div>
+    <div class="desc">Clean lily scent with soft elegance.</div>
+  </div>
+
+  <div class="card">
+    <img src="images/download (5).jpg">
+    <div class="name">Blush Aura</div>
+    <div class="price">Php 6,000</div>
+    <div class="desc">Soft pink floral with airy freshness.</div>
+  </div>
+
+  <div class="card">
+    <img src="images/perfume 1.jpg">
+    <div class="name">Dream Mist</div>
+    <div class="price">Php 20,000</div>
+    <div class="desc">Light dreamy fragrance with soft notes.</div>
+  </div>
+
+  <!-- Row 3 -->
+  <div class="card">
+    <img src="images/perfume 2.jpg">
+    <div class="name">Petal Noir</div>
+    <div class="price">Php 7,500</div>
+    <div class="desc">Mysterious dark floral with soft musk.</div>
+  </div>
+
+  <div class="card">
+    <img src="images/perfume 3.jpg">
+    <div class="name">Golden Bloom</div>
+    <div class="price">Php 11,000</div>
+    <div class="desc">Warm golden floral with oriental depth.</div>
+  </div>
+
+  <div class="card">
+    <img src="images/Fairy Potion.jpg">
+    <div class="name">Fairy Potion</div>
+    <div class="price">Php 4,200</div>
+    <div class="desc">Whimsical sweet scent with a magical touch.</div>
+  </div>
+
+  <div class="card">
+    <img src="images/cutie.jpg">
+    <div class="name">Cherry Dew</div>
+    <div class="price">Php 3,500</div>
+    <div class="desc">Fruity floral with a fresh dewy finish.</div>
+  </div>
+
+  <!-- Row 4 -->
+  <div class="card">
+    <img src="images/cake.jpg">
+    <div class="name">Vanilla Mist</div>
+    <div class="price">Php 5,000</div>
+    <div class="desc">Soft vanilla with a gentle floral veil.</div>
+  </div>
+
+  <div class="card">
+    <img src="images/download (1).jpg">
+    <div class="name">Ember Rose</div>
+    <div class="price">Php 13,000</div>
+    <div class="desc">Bold rose warmed by smoky amber.</div>
+  </div>
+
+  <div class="card">
+    <img src="images/download (4).jpg">
+    <div class="name">Satin Bloom</div>
+    <div class="price">Php 6,800</div>
+    <div class="desc">Silky smooth florals on a powdery base.</div>
+  </div>
+
+  <div class="card">
+    <img src="images/download (5).jpg">
+    <div class="name">Twilight Petal</div>
+    <div class="price">Php 9,000</div>
+    <div class="desc">Evening floral with a lingering warmth.</div>
+  </div>
+
 </div>
 
-<div class="card">
-<img src="images/cutie.jpg">
-<div class="name">Pink Bloom</div>
-<div class="price">Php 3,000</div>
-<div class="desc">Sweet and feminine with fresh petals.</div>
-</div>
-
-<div class="card">
-<img src="images/cake.jpg">
-<div class="name">Soft Petals</div>
-<div class="price">Php 2,800</div>
-<div class="desc">Light airy fragrance with gentle florals.</div>
-</div>
-
-<div class="card">
-<img src="images/download (1).jpg">
-<div class="name">Velvet Rose</div>
-<div class="price">Php 9,500</div>
-<div class="desc">Deep rose scent with warm undertones.</div>
-</div>
-
-<div class="card">
-<img src="images/download (4).jpg">
-<div class="name">Sugar Blossom</div>
-<div class="price">Php 8,000</div>
-<div class="desc">Sweet candy-like floral fragrance.</div>
-</div>
-
-<div class="card">
-<img src="images/Sweetheart by LoveShackFancy 🎀💕💗.jpg">
-<div class="name">Lily Dream</div>
-<div class="price">Php 2,000</div>
-<div class="desc">Clean lily scent with soft elegance.</div>
-</div>
-
-<div class="card">
-<img src="images/download (5).jpg">
-<div class="name">Blush Aura</div>
-<div class="price">Php 6,000</div>
-<div class="desc">Soft pink floral with airy freshness.</div>
-</div>
-
-<div class="card">
-<img src="images/perfume 2.jpg">
-<div class="name">Crystal Petal</div>
-<div class="price">Php 23,000</div>
-<div class="desc">Fresh and delicate crystal floral scent.</div>
-</div>
-
-<div class="card">
-<img src="images/perfume 3.jpg">
-<div class="name">Honey Rose</div>
-<div class="price">Php 21,000</div>
-<div class="desc">Warm honey blended with soft rose.</div>
-</div>
-
-<div class="card">
-<img src="images/perfume 1.jpg">
-<div class="name">Dream Mist</div>
-<div class="price">Php 20,000</div>
-<div class="desc">Light dreamy fragrance with soft notes.</div>
-</div>
-
-</div>
 
 </body>
 </html>
